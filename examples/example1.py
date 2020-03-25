@@ -1,6 +1,4 @@
-from terminalmenu.TerminalMenu import TerminalMenu
+from terminalmenu import *
 
-
-
-
-
+terminal = TerminalMenu()
+clear_terminal()
