@@ -3,7 +3,7 @@ from .MenuItem import MenuItem
 
 class ExitItem(MenuItem):
     """
-    
+    Se usa para salir del menú actual.
     """
     def __init__(self, text='Salir', menu=None):
         super(ExitItem, self).__init__(text=text, menu=menu, should_exit=True)
