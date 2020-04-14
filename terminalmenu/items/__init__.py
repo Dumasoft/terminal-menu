@@ -1,9 +1,9 @@
-from .MenuItem import MenuItem
 from .ExitItem import ExitItem
-from .ExternalItem import ExternalItem
+from .MenuItem import MenuItem
 from .CommandItem import CommandItem
+from .ExternalItem import ExternalItem
 from .FunctionItem import FunctionItem
-from .SubmenuItem import SubmenuItem
 from .SelectionItem import SelectionItem
+from .SubmenuItem import SubmenuItem
 
-__all__ = ['MenuItem', 'ExitItem', 'ExternalItem', 'CommandItem', 'FunctionItem', 'SubmenuItem', 'SelectionItem']
+__all__ = ['ExitItem', 'MenuItem', 'CommandItem', 'ExternalItem', 'FunctionItem', 'SelectionItem', 'SubmenuItem']

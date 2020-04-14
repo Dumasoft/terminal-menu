@@ -1,17 +1,15 @@
 import curses
-from terminalmenu.items.MenuItem import MenuItem
+from .MenuItem import MenuItem
 
 
 class SubmenuItem(MenuItem):
     """
-
+    Un elemento de menú para abrir un submenú.
     """
     def __init__(self, text, submenu, menu=None, should_exit=False):
-        """
-        :param submenu: El submenú que se abrirá cuando se seleccione este elemento
-        """
         super(SubmenuItem, self).__init__(text=text, menu=menu, should_exit=should_exit)
 
+        # El submenú que se abrirá cuando se seleccione este elemento
         self.submenu = submenu
 
         if menu:
@@ -19,8 +17,8 @@ class SubmenuItem(MenuItem):
 
     def set_menu(self, menu):
         """
-        Establece el menú del item.
-        Debe usarse en lugar de acceder directamente al atributo de menú para esta clase
+        Establece el menú de este elemento.
+        Debe usarse en lugar de acceder directamente al atributo de menú para esta clase.
         :param menu: el menú
         """
         self.menu = menu
@@ -43,4 +41,7 @@ class SubmenuItem(MenuItem):
         self.menu.resume()
 
     def get_return(self):
+        """
+        :return: El valor devuelto en el submenú
+        """
         return self.submenu.returned_value

@@ -1,8 +1,8 @@
-from .TerminalMenu import TerminalMenu
-from .utils import clear_terminal
-from .utils import parse_old
-from .menus import SelectionMenu
-from . import items
 from .version import __version__
+from .TerminalMenu import TerminalMenu
+from . import items
+from . import utils
+from . import menus
 
-__all__ = ['TerminalMenu', 'SelectionMenu', 'items', 'clear_terminal', 'parse_old']
+__all__ = ['__version__', 'items', 'utils', 'menus', 'TerminalMenu']
+

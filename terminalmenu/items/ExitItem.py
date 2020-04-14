@@ -1,18 +1,13 @@
-from terminalmenu.items.MenuItem import MenuItem
+from .MenuItem import MenuItem
 
 
 class ExitItem(MenuItem):
     """
-    Se usa para salid del menú actual.
+    Se usa para salir del menú actual.
     """
-
     def __init__(self, text='Salir', menu=None):
         super(ExitItem, self).__init__(text=text, menu=menu, should_exit=True)
 
     def show(self, index):
-        if self.menu and self.menu.parent:
-            self.text = f'Regresar al menú {self.menu.parent.title}'
-        else:
-            self.text = 'Salir'
-
+        self.text = f'Regresar al menu {self.menu.parent.title}' if self.menu and self.menu.parent else 'Salir'
         return super(ExitItem, self).show(index)
